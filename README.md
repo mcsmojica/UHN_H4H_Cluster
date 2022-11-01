@@ -9,4 +9,4 @@ Sections:
 4. Submitting a job on the cluster + sample scripts
 5. Using GPUs on the cluster
 6. Using containers on the cluster
-7. Basic Conda commands
+7. [Basic Conda commands](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
