@@ -3,16 +3,17 @@
 Getting started with the UHN Cluster
 
 ## Sections:
-[Basic Overview of the cluster](#)
-[Reporting Issues with the Cluster](#)
-[Step 1a) Logging on to the HPC](#)
-[Step 1b) Understanding the usage of the login vs data transfer nodes](#)
-[Step 2) Setting up your .bashrc](#)
-[Step 3) Transferring Files in and Out of the Cluster](#)
-[Basic overview of Slurm](#)
-[Step 4a) Submitting Jobs to Slurm](#)
-[Step 4b) Using Programs on the Cluster](#)
-[Using GPU Nodes](#)
+* [Basic Overview of the cluster](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#the-lay-of-the-cluster-land)
+* [Reporting Issues with the Cluster](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#issues-with-the-cluster)
+* [Step 1a) Logging on to the HPC](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#step-1a-logging-on-to-the-hpc)
+* [Step 1b) Understanding the usage of the login vs data transfer nodes](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#step-1b-understanding-the-usage-of-the-login-vs-data-transfer-nodes)
+* [Step 2) Setting up your .bashrc](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#step-2-setting-up-your-bashrc)
+* [Step 3) Transferring Files in and Out of the Cluster](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#step-3-transferring-files-in-and-out-of-the-cluster)
+* [Basic overview of Slurm](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#slurm)
+* [Step 4a) Submitting Jobs to Slurm](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#step-4a-submitting-jobs-to-slurm)
+* [Step 4b) Using Programs on the Cluster](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#step-4b-using-programs-on-the-cluster)
+* [Basic Slurm Commands](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#basic-slurm-commands)
+* [Using GPU Nodes](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#using-gpu-nodes)
 
 ## The lay of the cluster land
 You can think of the cluster as thousands of computers, each individual computer being considered a “node”. For our purposes / ease of understanding, the UHN cluster has 3 main types of nodes: the login node, the data transfer node, and the compute nodes. The compute nodes can be either CPU nodes or GPU nodes (explained further below). The nodes are grouped into different partitions, which have different maximum levels of resources allocated to them. 
