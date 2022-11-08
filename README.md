@@ -3,7 +3,7 @@
 Getting started with the UHN Cluster
 
 ## Sections:
-* [Basic Overview of the cluster](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#the-lay-of-the-cluster-land)
+* [Basic Overview of the cluster](#the-lay-of-the-cluster-land)
 * [Reporting Issues with the Cluster](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#issues-with-the-cluster)
 * [Step 1a) Logging on to the HPC](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#step-1a-logging-on-to-the-hpc)
 * [Step 1b) Understanding the usage of the login vs data transfer nodes](#https://github.com/mcsmojica/UHN_H4H_Cluster/blob/main/README.md#step-1b-understanding-the-usage-of-the-login-vs-data-transfer-nodes)
