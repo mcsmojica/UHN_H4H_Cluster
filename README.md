@@ -286,26 +286,32 @@ This command is to show Slurm share information
 sshare 
 sshare –l  # long format
 ```
-## Using GPU Nodes
+## Using GPU Nodes (thanks to @scarere , @briannghiem , and @ nbwuzhe)
 
 <!--  Ariana: To use the GPU nodes, you need to use your “gpu” account and one of the “gpu” partitions. You also need to request the number of GPUs you need to use. For example,
 ```
 sbatch  -A groupname_gpu -p gpu --gres=gpu:1 my_script.sh
 ```  -->
 
-If your code requires GPUs, select the GPU partition when allocating resources. To do this, simply indicate 'gpu' as the partition argument and the account for your lab. For example:
+If you need to use GPUs, you need to select the GPU partition when allocating resources. You can do so by adding the argument '-p gpu' to your salloc command or job script. You also have to provide the account for your lab:
 ```
 salloc -p gpu --account=groupname_gpu -t 3:00:00 -c 6 --mem 20G
 ```
 Note that the --mem flag above refers to system/cpu memory (RAM) and NOT the GPU memory (VRAM).
-If you wish to select multiple GPUs, then use the gres flag as follows:
-```
-salloc -p gpu --account=groupname_gpu --gres=gpu:3 -t 3:00:00 -c 6 --mem 20G
-```
-The gres flag can also be used to specify the type of GPU that you want. There are two kinds of GPUs on the UHN H4H cluster.
-1. [Tesla V100 PCIE](https://www.nvidia.com/en-us/data-center/v100/)
-    * 16 or 32GB VRAM
-    * denoted by 'v100'
-2. [Tesla P100 PCIE](https://www.nvidia.com/en-us/data-center/tesla-p100/)
-    * 12GB VRAM
-    * denoted by 'p100'
+
+The 'gres' flag is used
+- If you wish to select multiple GPUs. For example,
+    ```
+    salloc -p gpu --account=groupname_gpu --gres=gpu:3 -t 3:00:00 -c 6 --mem 20G
+    ```
+- To specify the GPU of choice. There are two kinds of GPUs on the UHN H4H cluster.
+    1. [Tesla V100 PCIE](https://www.nvidia.com/en-us/data-center/v100/)
+        * denoted by 'v100'
+        * 16 or 32GB VRAM
+    Note that simply selecting 'v100' means that you could be allocated the 16GB version. If you need the 32GB v100's, then you need to add the -C gpu32g flag when allocating resources:
+    ```
+
+    ```
+    2. [Tesla P100 PCIE](https://www.nvidia.com/en-us/data-center/tesla-p100/)
+        * 12GB VRAM
+        * denoted by 'p100'
