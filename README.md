@@ -287,7 +287,7 @@ sshare
 sshare –l  # long format
 ```
 ## Using GPU Nodes
-(thanks @scarere , @briannghiem , and @ nbwuzhe)
+(thanks @scarere, @briannghiem, and @ nbwuzhe)
 
 <!--  Ariana: To use the GPU nodes, you need to use your “gpu” account and one of the “gpu” partitions. You also need to request the number of GPUs you need to use. For example,
 ```
@@ -301,7 +301,7 @@ salloc -p gpu --account=groupname_gpu -t 3:00:00 -c 6 --mem 20G
 Note that the --mem flag above refers to system/cpu memory (RAM) and NOT the GPU memory (VRAM).
 
 The 'gres' flag is used
-- If you wish to select multiple GPUs. For example,
+- To select multiple GPUs. For example,
     ```
     salloc -p gpu --account=groupname_gpu --gres=gpu:3 -t 3:00:00 -c 4 --mem 20G
     ```
