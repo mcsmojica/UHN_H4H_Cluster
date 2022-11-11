@@ -293,7 +293,7 @@ sshare –l  # long format
 sbatch  -A groupname_gpu -p gpu --gres=gpu:1 my_script.sh
 ```  -->
 
-If you need to use GPUs, you need to select the GPU partition when allocating resources. You can do so by adding the argument '-p gpu' to your salloc command or job script. You also have to provide the account for your lab:
+If you wish to use GPUs, make sure to select the GPU partition when allocating resources. You can do so by adding the argument '-p gpu' to your salloc command or job script. You also have to provide the account for your lab:
 ```
 salloc -p gpu --account=groupname_gpu -t 3:00:00 -c 6 --mem 20G
 ```
@@ -308,10 +308,13 @@ The 'gres' flag is used
     1. [Tesla V100 PCIE](https://www.nvidia.com/en-us/data-center/v100/)
         * denoted by 'v100'
         * 16 or 32GB VRAM
-    Note that simply selecting 'v100' means that you could be allocated the 16GB version. If you need the 32GB v100's, then you need to add the -C gpu32g flag when allocating resources:
+    Note that simply adding the 'v100' argument means that you could be allocated the 16GB version. If you need the 32GB v100's, then you need to add the -C gpu32g flag when allocating resources:
     ```
-
+    salloc -p gpu --account=groupname_gpu --gres=gpu:v100:3 -t 3:00:00 -c 4 --mem 20G -C gpu32g
     ```
     2. [Tesla P100 PCIE](https://www.nvidia.com/en-us/data-center/tesla-p100/)
         * 12GB VRAM
         * denoted by 'p100'
+    ```
+    salloc -p gpu --account=groupname_gpu --gres=gpu:p100:1 -t 3:00:00 -c 4 --mem 20G
+    ```
