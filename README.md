@@ -309,6 +309,7 @@ The 'gres' flag is used
     1. [Tesla V100 PCIE](https://www.nvidia.com/en-us/data-center/v100/)
         * denoted by 'v100'
         * 16 or 32GB VRAM
+        
     Note that simply adding the 'v100' argument means that you could be allocated the 16GB version. If you need the 32GB v100's, then you need to add the -C gpu32g flag when allocating resources:
     ```
     salloc -p gpu --account=groupname_gpu --gres=gpu:v100:3 -t 3:00:00 -c 4 --mem 20G -C gpu32g
