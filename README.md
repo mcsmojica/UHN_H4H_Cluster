@@ -319,3 +319,4 @@ The 'gres' flag is used
     ```
     salloc -p gpu --account=groupname_gpu --gres=gpu:p100:1 -t 3:00:00 -c 4 --mem 20G
     ```
+    
