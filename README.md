@@ -317,6 +317,5 @@ The 'gres' flag is used
         * 12GB VRAM
         * denoted by 'p100'
     ```
-    salloc -p gpu --account=groupname_gpu --gres=gpu:p100:1 -t 3:00:00 -c 4 --mem 20G
+    salloc -p gpu --account=groupname_gpu --gres=gpu:p100:1 -t 3:00:00 -c 4 --mem 20G s
     ```
-    
